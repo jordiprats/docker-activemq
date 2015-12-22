@@ -15,3 +15,16 @@ touch /etc/puppet/hiera.yaml
 sed '/^templatedir/d' -i /etc/puppet/puppet.conf
 
 puppet apply --modulepath=/usr/local/src/puppetmodules/ /tmp/manifest.pp
+
+/etc/init.d/activemq start
+
+sleep 5
+
+while true;
+do
+	if [ "$(ps -fea | grep [a]ctivemq | wc -l)" -ne 1 ];
+	then
+		/etc/init.d/activemq start
+	fi
+	sleep 10
+done
