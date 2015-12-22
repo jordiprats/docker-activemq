@@ -1,8 +1,8 @@
 #!/bin/bash
 
-mkdir -p /modules/logs/
+mkdir -p /logs/logs/
 
-exec > /modules/logs/activemq.startup.${EYP_INSTANCE_NUMBER}.log 2>&1
+exec > /logs/logs/activemq.startup.${EYP_INSTANCE_NUMBER}.log 2>&1
 
 cat <<EOF > /tmp/manifest.pp
 class { 'mcollective::activemq':
