@@ -2,7 +2,7 @@
 
 mkdir -p /modules/logs/
 
-exec > /modules/logs/puppetmaster.startup.${EYP_INSTANCE_NUMBER}.log 2>&1
+exec > /modules/logs/activemq.startup.${EYP_INSTANCE_NUMBER}.log 2>&1
 
 cat <<EOF > /tmp/manifest.pp
 
