@@ -22,7 +22,7 @@ sleep 5
 
 while true;
 do
-	if [ "$(ps -fea | grep [a]ctivemq | wc -l)" -ne 1 ];
+	if [ "$(ps -fea | grep [a]ctivemq | wc -l)" -eq 0 ];
 	then
 		/etc/init.d/activemq start
 	fi
