@@ -45,3 +45,5 @@ RUN git clone https://github.com/puppetlabs/puppetlabs-stdlib /usr/local/src/pup
 RUN git clone https://github.com/puppetlabs/puppetlabs-concat /usr/local/src/puppetmodules/concat
 
 EXPOSE 6163
+
+CMD /bin/bash /usr/local/bin/runme.sh
