@@ -4,6 +4,8 @@ mkdir -p /logs/logs/
 
 exec > /logs/logs/activemq.startup.${EYP_INSTANCE_NUMBER}.log 2>&1
 
+apt-get update
+
 cat <<EOF > /tmp/manifest.pp
 class { 'mcollective::activemq':
  adminpw => 'admin',
